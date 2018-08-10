@@ -64,4 +64,4 @@ Vá no jenkins, localhost:8080
 
 Após entrar no jenkins, acesse a opção de "new freestyle project", de um nome para o projeto, siga adiante.
 
-![alt text](https://imgur.com/a/UPFpGZd)
+![alt text](https://i.imgur.com/vJIhFwe.png)
