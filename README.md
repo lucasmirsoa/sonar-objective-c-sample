@@ -74,8 +74,28 @@ Vá no jenkins, localhost:8080
 
 Após entrar no jenkins, acesse a opção de "new freestyle project", de um nome para o projeto, siga adiante.
 
+
+
+Nesta primeira etapa você pode deixar algumas informações especificando um pouco sobre o projeto
+
 ![alt text](https://i.imgur.com/vJIhFwe.png)
 
+
+
+Já nesta você precisa configurar o ambiente git (repositório e branch desejada), caso o repositório seja privado será necessário adicionar suas credenciais de git no Jenkins e dps selecioná-las posteriormente nesta opção.
+
+Lembrando que você pode adicionar inúmeros repositórios para serem checados com essa mesma rotina
+
 ![alt text](https://i.imgur.com/uTQ3Gtn.png)
+
+
+
+Aqui eu adiciono um tempo médio de checagem do repositório, desta maneira ai ajustada ele fica checando de 5 em 5 minutos por commits e também decidi que gostaria de limpar todo o workspace a cada novo update de codigo.
+
+![alt text](https://i.imgur.com/Ocsb8yt.png)
+
+
+
+Esta opção é onde você adiciona o codigo shell necessário, caso seja do seu interesse, dessa forma acabei optando por copiar o diretório onde o Jenkins baixa a aplicação, dentro do seu ambiente, e colei em um diretório fora do ambiente do Jenkins e posteriormente acesso a pasta e mando rodar o script shell que indiquei logo no inicio deste tutorial.
 
 ![alt text](https://i.imgur.com/NxcRjdQ.png)
