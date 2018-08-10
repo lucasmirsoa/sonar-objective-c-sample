@@ -2,8 +2,12 @@
 
 A solução contempla a utilização das seguintes ferramentas, docker, jenkins e sonarqube.
 
-Também existem as gems que são necessárias, aconselho a manter seu ruby atualizado, as gems são as seguintes: oclint, xcpretty, xcodebuild, slather e sonar-scanner.
+Também existem as gems que são necessárias, aconselho a manter seu ruby atualizado, as gems são as seguintes: oclint, xcpretty, xcodebuild, lizard, slather e sonar-scanner.
 Apenas utilizando "gem install gemDesejada" no terminal já da cabo do assunto.
+
+Executar também:
+
+xcode-select --install
 
 É necessário baixar o docker e seguir as indicações do próprio docker para a instalação dos containers que conterão tanto jenkins quanto sonarqube.
 
@@ -17,15 +21,21 @@ e após isso
 
 docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:6.7.4
 
-feito isso será montada a imagem em um novo container do docker e dará start ao container com a imagem automaticamente.
+Já para o Jenkins
 
-após isso é a vez do jenkins
+instalar o java (JDK) mais atual
 
-docker pull jenkins
+baixar o executável do Jenkins LTS no site do mesmo
 
-docker run -p 8080:8080 -p 50000:50000 jenkins
+após instalação abrir terminal e executar:
 
-Na primeira vez q é levantado um novo jenkins, é necessário pegar a chave gerada neste caminho: /var/jenkins_home/secrets/initialAdminPassword e utilizar ao acessar pela primeira vez o localhost:8080.
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8` e ou adicionar ao ~/.bash-profile
+
+após isso executar o comando
+
+java -jar /Applications/Jenkins/jenkins.war
+
+Na primeira vez q é iniciado um novo jenkins, é necessário pegar a chave gerada neste caminho: /var/jenkins_home/secrets/initialAdminPassword e utilizar ao acessar pela primeira vez o localhost:8080.
 
 Após isso ambientes estarão parcialmente prontos.
 
@@ -65,3 +75,7 @@ Vá no jenkins, localhost:8080
 Após entrar no jenkins, acesse a opção de "new freestyle project", de um nome para o projeto, siga adiante.
 
 ![alt text](https://i.imgur.com/vJIhFwe.png)
+
+![alt text](https://i.imgur.com/uTQ3Gtn.png)
+
+![alt text](https://i.imgur.com/NxcRjdQ.png)
