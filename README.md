@@ -54,7 +54,7 @@ Ve no que dá, se tudo foi configurado direitinho, e não tivemos nenhuma grande
 
 Foi? Sem erro?
 
-Confere no sonarqube, lembrando é localhost:9000
+Confere no sonarqube, lembrando que é localhost:9000
 
 admin:admin normalmente é o acesso padrão inicial
 
@@ -62,4 +62,6 @@ Apareceu o projeto lá? Show, agora podemos ir para a parte do Jenkins
 
 Vá no jenkins, localhost:8080
 
-Após entrar no jenkins, acesse a opção de "new freestyle project"
+Após entrar no jenkins, acesse a opção de "new freestyle project", de um nome para o projeto, siga adiante.
+
+![alt text](https://imgur.com/a/UPFpGZd)
