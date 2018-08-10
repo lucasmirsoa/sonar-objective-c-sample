@@ -496,6 +496,7 @@ rm -rf xcodebuild.log
 rm -rf compile_commands.json
 rm -rf build/
 rm -rf sonar-reports/
+rm -rf .scannerwork
 
 # Kill progress indicator
 stopProgress
