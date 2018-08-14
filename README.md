@@ -13,7 +13,6 @@ Também existem as gems que são necessárias, aconselho a manter seu ruby atual
 ### Iniciando a integração da solução
 
 1. Instalações
-
 * xcode-select --install
 
 ⋅⋅1. \curl -sSL https://get.rvm.io | bash -s stable --ruby
