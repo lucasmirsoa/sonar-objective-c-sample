@@ -1,10 +1,18 @@
 # sonar-objective-c-sample
 
+### Objetivo
+
+Automatizar testes e levantar estatísticas de um projeto desenvolvido em Objetive-c.
+
+### Quais ferramentas foram utilizadas?
+
 A solução contempla a utilização das seguintes ferramentas, docker, jenkins e sonarqube.
 
-Também existem as gems que são necessárias, aconselho a manter seu ruby atualizado, as gems são as seguintes: oclint, xcpretty, xcodebuild, lizard, slather e sonar.
+Também existem as gems que são necessárias, aconselho a manter seu ruby atualizado, as gems são as seguintes: oclint, xcpretty, lizard, slather e sonar.
 
 Apenas utilizando "gem install gemDesejada" no terminal já da cabo do assunto.
+
+### Iniciando a integração da solução
 
 Executar também:
 
