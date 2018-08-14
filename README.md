@@ -22,7 +22,7 @@ Também existem as gems que são necessárias, aconselho a manter seu ruby atual
 * gem install sonar
 * gem install oclint
 
-> É necessário baixar o docker e seguir as indicações do próprio docker para a instalação dos containers que conterão tanto jenkins quanto sonarqube.
+> É necessário baixar o docker e seguir as indicações do próprio docker para a instalação dos containers que conterá o sonarqube.
 
 2. Para baixar e configurar o sonarqube no docker é necessário inserir o comando:
 
@@ -34,27 +34,18 @@ Também existem as gems que são necessárias, aconselho a manter seu ruby atual
 
 * docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:6.7.4
 
-Já para o Jenkins
+3. Já para o Jenkins é necessário instalar o java (JDK) mais atual, baixar o executável do Jenkins LTS no site do mesmo e após instalação abrir terminal e executar:
 
-instalar o java (JDK) mais atual
+* export JAVA_HOME=`/usr/libexec/java_home -v 1.8` 
+> e ou adicionar ao ~/.bash-profile
 
-baixar o executável do Jenkins LTS no site do mesmo
+* java -jar /Applications/Jenkins/jenkins.war
 
-após instalação abrir terminal e executar:
+> Na primeira vez q é iniciado um novo jenkins, é necessário pegar a chave gerada neste caminho: /var/jenkins_home/secrets/initialAdminPassword e utilizar ao acessar pela primeira vez o localhost:8080.
 
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8` e ou adicionar ao ~/.bash-profile
+> Após isso, ambientes estarão parcialmente prontos podendo assim serem acessados por <b>localhost:8080</b> (jenkins) e <b>localhost:9000</b> (sonarqube)
 
-após isso executar o comando
-
-java -jar /Applications/Jenkins/jenkins.war
-
-Na primeira vez q é iniciado um novo jenkins, é necessário pegar a chave gerada neste caminho: /var/jenkins_home/secrets/initialAdminPassword e utilizar ao acessar pela primeira vez o localhost:8080.
-
-Após isso ambientes estarão parcialmente prontos.
-
-Podendo assim serem acessados por localhost:8080 (jenkins) e localhost:9000 (sonarqube)
-
-Para prosseguimento de um projeto em objective-c é necessário que seja instalado o plugin backelite-sonar-objective-c-plugin no sonarqube, este pode ser encontrado no github backelite/sonar-objective-c
+4. Para prosseguimento de um projeto em objective-c é necessário que seja instalado o plugin backelite-sonar-objective-c-plugin no sonarqube, este pode ser encontrado no github <b>backelite/sonar-objective-c</b>
 
 após este ser baixado é necessário que seja acessado pelo terminal o diretório onde esteja localizado o plugin e, lembrando que esse caminho esta utilizando a versão atual do plugin como demonstração:
 
