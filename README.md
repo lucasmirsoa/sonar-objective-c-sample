@@ -14,21 +14,21 @@ Também existem as gems que são necessárias, aconselho a manter seu ruby atual
 
 1. Instalações:
 
-⋅⋅* xcode-select --install
+⋅⋅1. xcode-select --install
 
-⋅⋅* \curl -sSL https://get.rvm.io | bash -s stable --ruby
+⋅⋅1. \curl -sSL https://get.rvm.io | bash -s stable --ruby
 
-⋅⋅* rvm install ruby
+⋅⋅1. rvm install ruby
 
-⋅⋅* gem install xcpretty
+⋅⋅1. gem install xcpretty
 
-⋅⋅* gem install lizard
+⋅⋅1. gem install lizard
 
-⋅⋅* gem install slather
+⋅⋅1. gem install slather
 
-⋅⋅* gem install sonar
+⋅⋅1. gem install sonar
 
-⋅⋅* gem install oclint
+⋅⋅1. gem install oclint
 
 É necessário baixar o docker e seguir as indicações do próprio docker para a instalação dos containers que conterão tanto jenkins quanto sonarqube.
 
