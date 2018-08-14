@@ -22,17 +22,17 @@ Também existem as gems que são necessárias, aconselho a manter seu ruby atual
 * gem install sonar
 * gem install oclint
 
-É necessário baixar o docker e seguir as indicações do próprio docker para a instalação dos containers que conterão tanto jenkins quanto sonarqube.
+> É necessário baixar o docker e seguir as indicações do próprio docker para a instalação dos containers que conterão tanto jenkins quanto sonarqube.
 
-Para baixar e configurar o sonarqube no docker é necessário inserir o comando:
+2. Para baixar e configurar o sonarqube no docker é necessário inserir o comando:
 
-docker pull sonarqube:6.7.4 
+* docker pull sonarqube:6.7.4 
 
-(:6.7.4 é a versão desejada atualmente|10/08/2018, também poderia ser utilizado apenas o sonarqube sem especificação de versão, pegando assim a mais atual)
+> (:6.7.4 é a versão desejada atualmente|10/08/2018, também poderia ser utilizado apenas o sonarqube sem especificação de versão, pegando assim a mais atual)
 
-e após isso 
+> e após isso 
 
-docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:6.7.4
+* docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:6.7.4
 
 Já para o Jenkins
 
