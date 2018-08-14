@@ -99,7 +99,7 @@ Aqui eu adiciono um tempo médio de checagem do repositório, desta maneira ai a
 
 Esta opção é onde você adiciona o codigo shell necessário, caso seja do seu interesse, dessa forma acabei optando por copiar o diretório onde o Jenkins baixa a aplicação, dentro do seu ambiente, e colei em um diretório fora do ambiente do Jenkins e posteriormente acesso a pasta e mando rodar o script shell que indiquei logo no inicio deste tutorial.
 
-![alt text](https://i.imgur.com/NxcRjdQ.png)
+![alt text](https://i.imgur.com/yUknK9i.png)
 
 
 
