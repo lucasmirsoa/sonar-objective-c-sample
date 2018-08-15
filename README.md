@@ -67,33 +67,25 @@ Bom, depois de tudo isso, abra o terminal, vá para o diretorio raiz do seu proj
 
 ![alt text](https://i.imgur.com/I2BAi9T.png)
 
-Apareceu o projeto lá? Show, agora podemos ir para a parte do Jenkins
+> Apareceu o projeto lá como na imagem acima? Show, agora podemos ir para o Jenkins.
 
-Vá no jenkins, <b>localhost:8080</b>
+Acesse o jenkins, <b>localhost:8080</b>
 
-Após entrar no jenkins, acesse a opção de "new freestyle project", de um nome para o projeto, siga adiante.
-
-
+Acesse a opção de `new freestyle project`, de um nome para o projeto e prossiga.
 
 Nesta primeira etapa você pode deixar algumas informações especificando um pouco sobre o projeto
 
 ![alt text](https://i.imgur.com/vJIhFwe.png)
 
-
-
 Já nesta você precisa configurar o ambiente git (repositório e branch desejada), caso o repositório seja privado será necessário adicionar suas credenciais de git no Jenkins e dps selecioná-las posteriormente nesta opção.
 
-Lembrando que você pode adicionar inúmeros repositórios para serem checados com essa mesma rotina
+> Lembrando que você pode adicionar inúmeros repositórios para serem checados com essa mesma rotina
 
 ![alt text](https://i.imgur.com/uTQ3Gtn.png)
-
-
 
 Aqui eu adiciono um tempo médio de checagem do repositório, desta maneira ai ajustada ele fica checando de 5 em 5 minutos por commits e também decidi que gostaria de limpar todo o workspace a cada novo update de codigo.
 
 ![alt text](https://i.imgur.com/Ocsb8yt.png)
-
-
 
 Esta opção é onde você adiciona o codigo shell necessário, caso seja do seu interesse, dessa forma acabei optando por copiar o diretório onde o Jenkins baixa a aplicação, dentro do seu ambiente, e colei em um diretório fora do ambiente do Jenkins e posteriormente acesso a pasta e mando rodar o script shell que indiquei logo no inicio deste tutorial.
 
@@ -101,6 +93,6 @@ Esta opção é onde você adiciona o codigo shell necessário, caso seja do seu
 
 
 
-PRONTO
+## PRONTO
 
-Feito isso, a cada novo commit na branch configurada no Jenkins, o mesmo detecta e manda rodar sua rotina de build, no meu caso foram aqueles comandos shell, assim que chega no ./run-sonar.sh ele inicia o processo de build do projeto, teste e a geração de relatórios, tudo dando certo ele já envia todos esses para o sonarqube e vualá.
+`Feito isso, a cada novo commit na branch configurada no Jenkins, o mesmo detecta e manda rodar sua rotina de build, no meu caso foram aqueles comandos shell, assim que chega no ./run-sonar.sh ele inicia o processo de build do projeto, teste e a geração de relatórios, tudo dando certo ele já envia todos esses para o sonarqube e vualá.
