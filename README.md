@@ -91,8 +91,8 @@ Esta opção é onde você adiciona o codigo shell necessário, caso seja do seu
 
 ![alt text](https://i.imgur.com/yUknK9i.png)
 
-
-
 ## PRONTO
 
-`Feito isso, a cada novo commit na branch configurada no Jenkins, o mesmo detecta e manda rodar sua rotina de build, no meu caso foram aqueles comandos shell, assim que chega no ./run-sonar.sh ele inicia o processo de build do projeto, teste e a geração de relatórios, tudo dando certo ele já envia todos esses para o sonarqube e vualá.
+Feito isso, a cada novo commit na branch configurada no Jenkins, o mesmo detecta e manda rodar sua rotina de build, no meu caso foram aqueles comandos shell, assim que chega no ./run-sonar.sh ele inicia o processo de build do projeto, teste e a geração de relatórios, tudo dando certo ele já envia todos esses para o sonarqube e vualá.
+
+![alt text](https://i.imgur.com/vzSzvmG.png)
