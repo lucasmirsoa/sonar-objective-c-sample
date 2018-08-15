@@ -31,11 +31,11 @@ Também existem as gems que são necessárias, aconselho a manter seu ruby atual
 
 3. Já para o Jenkins é necessário instalar o java (JDK) mais atual, baixar o executável do Jenkins LTS no site do mesmo e após instalação abrir terminal e executar:
 
-* export JAVA_HOME=`/usr/libexec/java_home -v 1.8` 
+* export JAVA_HOME=``/usr/libexec/java_home -v 1.8`` 
 * java -jar /Applications/Jenkins/jenkins.war
-> Você tambêm poderia adicionar <b>export JAVA_HOME=`/usr/libexec/java_home -v 1.8`</b> adicionar ao ~/.bash-profile
-> Na primeira vez q é iniciado um novo jenkins, é necessário pegar a chave gerada neste caminho: <b>/var/jenkins_home/secrets/initialAdminPassword</b> e utilizar ao acessar pela primeira vez o <b>localhost:8080</b>
-> Após isso, ambientes estarão parcialmente prontos podendo assim serem acessados por <b>localhost:8080</b> (jenkins) e <b>localhost:9000</b> (sonarqube)
+> Você tambêm poderia adicionar <b>export JAVA_HOME=``/usr/libexec/java_home -v 1.8``</b> ao ~/.bash-profile
+> Na primeira vez q é iniciado um novo jenkins, é necessário pegar a chave gerada neste caminho: <b>/var/jenkins_home/secrets/initialAdminPassword</b> e utilizar este password ao acessar pela primeira vez o <b>localhost:8080</b>
+> Finalizando isso, ambientes estarão parcialmente prontos podendo assim serem acessados por <b>localhost:8080</b> (jenkins) e <b>localhost:9000</b> (sonarqube)
 
 4. Para prosseguimento de um projeto em objective-c é necessário que seja instalado o plugin backelite-sonar-objective-c-plugin no sonarqube, este pode ser encontrado no github <b>backelite/sonar-objective-c</b>
 
@@ -43,13 +43,12 @@ Também existem as gems que são necessárias, aconselho a manter seu ruby atual
 
 * docker cp backelite-sonar-objective-c-plugin-0.6.2.jar sonarqube:opt/sonarqube/extensions/plugins
 * docker restart sonarqube
-
   * Logo após a instalação do plugin é necessário restartar o sonarqube e após o restart você deve selecionar esta aba:
   ![alt text](https://i.imgur.com/r12j0my.png)
   * E buscar este Quality Profile para validar se foi instalado corretamente no sonarqube
   ![alt text](https://i.imgur.com/CdJF2uC.png)
 
-5. Para prosseguir é necessário que no projeto iOS você vá em edit scheme e na opção Test entre em Options, selecione "Gather coverage for" e selecione all targets
+5. Para prosseguir é necessário que você inicie o projeto iOS, vá em `edit scheme` e na opção `Test` entre em Options, selecione `Gather coverage for` e selecione `all targets`
 > Ah, e também marque o Scheme como <b>Shared</b>
 
 > Não esqueça do arquivo <b>sonar-project.properties</b> configurado como deve para o seu projeto, este arquivo com modelo a ser seguido pode ser encontrado na raiz deste projeto.
