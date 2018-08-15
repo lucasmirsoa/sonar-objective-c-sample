@@ -27,7 +27,7 @@ Também existem as gems que são necessárias, aconselho a manter seu ruby atual
 
 * docker pull sonarqube:6.7.4 
 * docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:6.7.4
-> (:6.7.4 é a versão desejada atualmente|10/08/2018, também poderia ser utilizado apenas o sonarqube sem especificação de versão, pegando assim a mais atual), após isso é necessário rodar a imagem em algum container.
+> (:6.7.4 é a versão desejada atualmente|10/08/2018, também poderia ser utilizado apenas o sonarqube sem especificação de versão, pegando assim a mais atual).
 
 3. Já para o Jenkins é necessário instalar o java (JDK) mais atual, baixar o executável do Jenkins LTS no site do mesmo e após instalação abrir terminal e executar:
 
