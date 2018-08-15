@@ -21,25 +21,20 @@ Também existem as gems que são necessárias, aconselho a manter seu ruby atual
 * gem install slather
 * gem install sonar
 * gem install oclint
-
-> É necessário baixar o docker e seguir as indicações do próprio docker para a instalação dos containers que conterá o sonarqube.
+> Caso você decida instalar o docker como eu, acesse o portal do docker e vá ná área de downloads.
 
 2. Para baixar e configurar o sonarqube no docker é necessário inserir o comando:
 
 * docker pull sonarqube:6.7.4 
-
-> (:6.7.4 é a versão desejada atualmente|10/08/2018, também poderia ser utilizado apenas o sonarqube sem especificação de versão, pegando assim a mais atual), após isso é necessário rodar a imagem em algum container.
-
 * docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:6.7.4
+> (:6.7.4 é a versão desejada atualmente|10/08/2018, também poderia ser utilizado apenas o sonarqube sem especificação de versão, pegando assim a mais atual), após isso é necessário rodar a imagem em algum container.
 
 3. Já para o Jenkins é necessário instalar o java (JDK) mais atual, baixar o executável do Jenkins LTS no site do mesmo e após instalação abrir terminal e executar:
 
 * export JAVA_HOME=`/usr/libexec/java_home -v 1.8` 
-> e ou adicionar ao ~/.bash-profile
 * java -jar /Applications/Jenkins/jenkins.war
-
-> Na primeira vez q é iniciado um novo jenkins, é necessário pegar a chave gerada neste caminho: <b>/var/jenkins_home/secrets/initialAdminPassword</b> e utilizar ao acessar pela primeira vez o <b>localhost:8080</b>.
-
+> Você tambêm poderia adicionar <b>export JAVA_HOME=`/usr/libexec/java_home -v 1.8`</b> adicionar ao ~/.bash-profile
+> Na primeira vez q é iniciado um novo jenkins, é necessário pegar a chave gerada neste caminho: <b>/var/jenkins_home/secrets/initialAdminPassword</b> e utilizar ao acessar pela primeira vez o <b>localhost:8080</b>
 > Após isso, ambientes estarão parcialmente prontos podendo assim serem acessados por <b>localhost:8080</b> (jenkins) e <b>localhost:9000</b> (sonarqube)
 
 4. Para prosseguimento de um projeto em objective-c é necessário que seja instalado o plugin backelite-sonar-objective-c-plugin no sonarqube, este pode ser encontrado no github <b>backelite/sonar-objective-c</b>
@@ -47,10 +42,12 @@ Também existem as gems que são necessárias, aconselho a manter seu ruby atual
 > Após este ser baixado é necessário que seja acessado pelo terminal o diretório onde esteja localizado o plugin e, lembrando que esse caminho esta utilizando a versão atual do plugin como demonstração:
 
 * docker cp backelite-sonar-objective-c-plugin-0.6.2.jar sonarqube:opt/sonarqube/extensions/plugins
-
-> Logo após isso, é necessário que o sonarqube seja restartado
-
 * docker restart sonarqube
+
+  * Logo após a instalação do plugin é necessário restartar o sonarqube e após o restart você deve selecionar esta aba:
+  ![alt text](https://i.imgur.com/r12j0my.png)
+  * E buscar este Quality Profile para validar se foi instalado corretamente no sonarqube
+  ![alt text](https://i.imgur.com/CdJF2uC.png)
 
 5. Para prosseguir é necessário que no projeto iOS você vá em edit scheme e na opção Test entre em Options, selecione "Gather coverage for" e selecione all targets
 > Ah, e também marque o Scheme como <b>Shared</b>
