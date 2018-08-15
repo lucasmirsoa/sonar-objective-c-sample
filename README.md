@@ -6,7 +6,7 @@ Automatizar testes e levantar estatísticas de um projeto desenvolvido em Objeti
 
 ### Quais ferramentas foram utilizadas?
 
-A solução contempla a utilização das seguintes ferramentas, docker, jenkins e sonarqube.
+A solução contempla a utilização das seguintes ferramentas, jenkins e sonarqube.
 
 Também existem as gems que são necessárias, aconselho a manter seu ruby atualizado, as gems são as seguintes: oclint, xcpretty, lizard, slather e sonar.
 
