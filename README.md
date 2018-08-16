@@ -32,9 +32,9 @@ Também existem as gems que são necessárias, aconselho a manter seu ruby atual
 
 3. Já para o Jenkins é necessário instalar o java (JDK) mais atual, baixar o executável do Jenkins LTS no site do mesmo e após instalação abrir terminal e executar:
 
-* export JAVA_HOME=``/usr/libexec/java_home -v 1.8`` 
+* export JAVA_HOME=\`/usr/libexec/java_home -v 1.8\` 
 * java -jar /Applications/Jenkins/jenkins.war
-> Você tambêm poderia adicionar <b>export JAVA_HOME=``/usr/libexec/java_home -v 1.8``</b> ao ~/.bash-profile
+> Você tambêm poderia adicionar <b>export JAVA_HOME=\`/usr/libexec/java_home -v 1.8\`</b> ao ~/.bash-profile
 > Na primeira vez q é iniciado um novo jenkins, é necessário pegar a chave gerada neste caminho: <b>/var/jenkins_home/secrets/initialAdminPassword</b> e utilizar este password ao acessar pela primeira vez o <b>localhost:8080</b>
 > Finalizando isso, ambientes estarão parcialmente prontos podendo assim serem acessados por <b>localhost:8080</b> (jenkins) e <b>localhost:9000</b> (sonarqube)
 
